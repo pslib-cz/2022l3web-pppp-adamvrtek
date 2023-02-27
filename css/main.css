@@ -1,0 +1,518 @@
+:root {
+    --orange: #F5841F;
+    --navy: #16213C;
+    --lightblue: #8ECAE6;
+    --lightgray: #F5F5F5;
+    --gray: #D9D9D9;
+    --blue: #2D4275;
+    --black: #000000;
+    --white: #FFFFFF;
+    --lightblue-background: rgba(142, 202, 230, 0.12);
+    --gray-background: rgba(217, 217, 217, 0.3)
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+h2, h3 {
+    color: var(--navy);
+    text-align: center;
+}
+
+.orange {
+    color: var(--orange);
+}
+
+.navy {
+    color: var(--navy);
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.figure {
+    margin: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 1em 2em;
+}
+
+figcaption {
+    font-size: 0;
+}
+
+address {
+    font-style: normal;
+}
+
+.button {
+    background-color: var(--orange);
+    padding: 1em;
+    text-align: center;
+    border: 4px solid var(--orange);
+    border-radius: 2em;
+    width: fit-content;
+    margin: auto;
+}
+
+.button a {
+    color: white;
+    font-size: 1.25em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.button:hover {
+    background-color: transparent;
+    border: 4px solid var(--orange);
+}
+
+.button:hover a {
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.header__kontakt {
+    background-color: var(--lightgray);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.header__kontakt p {
+    margin: 0;
+}
+
+.header__kontakt__address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.phone::before {
+    content: url(../ico/phone.svg);
+    margin-right: 0.5em;
+}
+
+.mail::before {
+    content: url(../ico/mail.svg);
+    margin-right: 0.5em;
+}
+
+.login::before {
+    content: url(../ico/login.svg);
+    margin-right: 0.5em;
+}
+
+.header__kontakt p {
+    display: flex;
+    align-items: center;
+}
+
+.phone::after {
+    content: "";
+    height: 1.5em;
+    width: 1px;
+    background-color: var(--gray);
+    margin: 0 1em;
+}
+
+.logo--hidden {
+    font-size: 0px; 
+ 
+}
+
+/*
+h1.logo--hidden::before {
+    content: url(../ico/logo-default.svg);
+    width: auto;
+}
+*/
+
+.header__box {
+    margin: 1.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header__button {
+    display: none;
+}
+
+.skola__list li {
+    list-style-image: url(../ico/checkmark.svg) ;
+}
+
+.skola__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.skola__figure {
+    grid-column: 3/5;
+    grid-row: 1/3;
+    margin-left: 0.5em;
+}
+
+.skola__list {
+    grid-column: 1/3;
+    grid-row: span 1;
+}
+
+.skola__button {
+    grid-column: 1/3;
+}
+
+.skola__figure img {
+    border-radius: 1em;
+}
+
+.sponsors {
+    display: grid;
+    grid-template-columns: 1fr 55px 1fr ;
+    margin: 2em;
+}
+
+.sponsors__logo--one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.sponsors__logo--two {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-top: 0.5em;
+}
+
+.sponsors__logo--three {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.sponsors__logo--four {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.sponsors__logo--five {
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.vyhody {
+    background-color: var(--lightblue-background);
+}
+
+.vyhody__icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.vyhody__icons p {
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.vyhody__icons--time::before {
+    content: url(../ico/time.svg);
+    margin: 1em 0;
+}
+
+.vyhody__icons--people::before {
+    content: url(../ico/people.svg);
+    margin: 1em 0;
+}
+
+.vyhody__icons--arrows::before {
+    content: url(../ico/arrows.svg);
+    margin: 1em 0;
+}
+
+.vyhody__icons--note::before {
+    content: url(../ico/note.svg);
+    margin: 1em 0;
+}
+
+.vyhody__icons::after {
+    content: "";
+    width: 95%;
+    height: 0;
+    border: 1px;
+    border-color: var(--lightblue);
+    border-style: dashed;
+    margin: 2em 0;
+}
+
+.vyhody__slider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between ;
+}
+
+.vyhody__slider__item {
+    display: block;
+    background-color: var(--white);
+    max-width: 40%;
+    margin: 1em 0;
+    padding: 1em;
+    padding-bottom: 2em;
+    border-radius: 1em;
+    box-shadow: 1px 1px 5px var(--gray);
+    position: relative;
+}
+
+.vyhody__slider__item:hover {
+    text-decoration: none;
+}
+
+.vyhody__slider__item:hover .vyhody__slider__item__header {
+    color: var(--orange);
+}
+
+.vyhody__slider__item:hover::after {
+    content: url(../ico/arrow-hover.svg);
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 15px;
+}
+
+.vyhody__slider__item > p {
+    max-height: 3.5em;
+    overflow: hidden;
+    margin: 0;
+}
+
+.pribeh > p {
+    max-height: 4.5em;
+    overflow: hidden;
+}
+
+.o-nas__main__article {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    margin: 1.5em 0;
+}
+
+.o-nas__main__article__text > p.smalltext {
+    max-height: 3.5em;
+    overflow: hidden;
+}
+
+.o-nas__main__article__text {
+    max-width: 55%;
+}
+
+.o-nas__main__article__text__italic {
+    margin-top: 0;
+}
+
+.o-nas__main__article__text__name {
+    margin-bottom: 0.5em;
+}
+
+.o-nas::before {
+    display: block;
+    content: "";
+    width: 95%;
+    height: 1px;
+    background-color: var(--gray);
+    margin: 1em 0;
+}
+
+.aktuality::before {
+    display: block;
+    content: "";
+    width: 95%;
+    height: 1px;
+    background-color: var(--gray);
+    margin: 1em 0;
+}
+
+.aktuality__main__item--first::before {
+    content: url(../ico/news_21.svg);
+    margin-right: 1.5em;
+    margin-top: 1em;
+}
+
+.aktuality__main__item--second::before {
+    content: url(../ico/news_8.svg);
+    margin-right: 1.5em;
+    margin-top: 1em;
+}
+
+.aktuality__main__item {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.aktuality__main__item__button > a {
+    color: var(--orange);
+}
+
+.footer {
+    color: var(--lightblue);
+    background-color: var(--navy);
+    margin-top: 3em;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+        padding: 2em;
+}
+
+.footer a {
+    color: var(--lightblue);
+}
+
+.footer__header--logo {
+    font-size: 0;
+}
+
+/*
+.footer__header--logo::before {
+    display: block;
+    content: "";
+    background-image: url(../ico/logo-footer.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 30px;
+    padding-top: 2em;
+}
+*/
+
+.footer__kontakt {
+    padding-top: 1.3em;
+}
+
+.footer__kontakt__ico {
+    margin-top: 3em;
+
+}
+
+/*
+.footer__kontakt::after {
+    display: block;
+    content: url(../ico/socials.svg);
+    margin-top: 2em;
+}
+*/
+
+.footer__footer::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 0.5px;
+    background-color: var(--lightblue);
+}
+
+.footer__footer__flex {
+    padding: 2em 1em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.footer__logo--img {
+    max-width: 120px;
+    margin-bottom: 1.5em;
+}
+
+.footer__kontakt__socials a {
+    display: block;
+    width: 18px;
+}
+
+.footer__kontakt__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.vyhody__slider a {
+    display: block;
+
+}
+
+.header__path {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+}
+
+.header__path::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background-color: var(--orange);
+    border-radius: 50%;
+}
+
+.header__path__funkce {
+    order: 1;
+}
+
+.main__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 1em;
+}
+
+.main__header h3 {
+    text-align: start;
+    margin-top: 0;
+}
+
+.main__header__video {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.vyhody__slider--funkce {
+    background-color: var(--gray-background);
+
+}
+
+.section__questions {
+    text-align: center;
+}
+
+.section__questions__mail {
+    margin: 1.5em;
+    display: block;
+}
