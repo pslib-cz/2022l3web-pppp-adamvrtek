@@ -68,3 +68,9 @@ h4 {
 .section__questions__header {
     font-size: 2em;
 }
+
+@media (min-width: 1150px) {
+    html {
+        font-size: 18px;
+    }
+}

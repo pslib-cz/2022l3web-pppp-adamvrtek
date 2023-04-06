@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <script src="hamburger.js"></script>
     <title>Logoipsum | Funkce</title>
 </head>
 <body>
     <header class="header">
         <div class="header__kontakt">
             <address class="header__kontakt__address">
-                <p class="header__kontakt--phone phone smalltext bold"><a href="tel:+420 777 666 666">+420 777 666 666</a></p>
+                <p class="header__kontakt--phone phone smalltext bold"><a href="tel:+420777666666">+420 777 666 666</a></p>
                 <p class="header__kontakt--mail mail smalltext bold"><a href="mailto:obchod@l3web.cz">obchod@l3web.cz</a></p>
             </address>
             <div class="header__kontakt--login">
@@ -27,25 +29,47 @@
                     <img src="ico/logo-default.svg" alt="Logoipsum">
                 </a>
             </div >
-            <nav class="header__menu">
-                <ul>
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="funkce.html">Funkce</a></li>
-                    <li><a href="">Podpora</a></li>
-                    <li><a href="">Ceník</a></li>
-                    <li><a href="">Kontakt</a></li>
-                </ul>
-            </nav>
+            <div class="hamburger__box">
+                <div class="hamburger-row">
+                    <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <nav class="hamburger-nav hamburger-zone bold">
+                    <ul>
+                        <li class="li--uvod"><a href="index.html">Úvod</a></li>
+                        <li class="li--funkce"><a href="funkce.html">Funkce</a></li>
+                        <li><a href="">Podpora</a></li>
+                        <li><a href="">Ceník</a></li>
+                        <li class="li--kontakt"><a href="">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div >
+            <div class="header__aside">
+                <nav class="header__menu header__menu--funkce bold">
+                    <ul>
+                        <li class="li--uvod"><a href="index.html">Úvod</a></li>
+                        <li class="li--funkce"><a href="funkce.html">Funkce</a></li>
+                        <li><a href="">Podpora</a></li>
+                        <li><a href="">Ceník</a></li>
+                        <li class="li--kontakt"><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <p class="button header__button"><a href="">Zkušební verze</a></p>
+           </div>
         </div> 
-        <p class="button header__button"><a href="">Zkušební verze</a></p>
-        <div class="header__path smalltext">
-            <a href="index.html">
-                <img src="ico/home.svg" alt="Tlačítko domů">
-            </a>
-            <a href="index.html">Úvod</a>
-            <a href="funkce.html" class="header__path__funkce">Funkce</a>
+        <div class="header__box--funkce">
+            <div class="header__path smalltext">
+                <a href="index.html">
+                    <img src="ico/home.svg" alt="Tlačítko domů">
+                </a>
+                <a href="index.html">Úvod</a>
+                <a href="funkce.html" class="header__path__funkce">Funkce</a>
+            </div>
+            <h2>Funkce</h2>
         </div>
-        <h2>Funkce</h2>
     </header>
     <main class="main main--funkce">
         <header class="main__header">
@@ -54,13 +78,16 @@
                 <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur.</p>
             </div>
             <div class="main__header__video">
-                <a href="">
+                <a href="" class="ico-video--regular">
                     <img src="ico/video.svg" alt="Videotutoriály tlačítko">
+                </a>
+                <a href="" class="ico-video--hover">
+                    <img src="ico/video-hover.svg" alt="Videotutoriály tlačítko">
                 </a>
                 <a href="">Videotutoriály</a>
             </div>
         </header>
-        <section class="section vyhody__slider vyhody__slider--funkce">
+        <div class="section vyhody__slider vyhody__slider--funkce">
             <a href="" class="vyhody__slider__item">
                 <header class="vyhody__slider__item__header navy">
                     <p class="bold">Administrace aplikace</p>
@@ -133,9 +160,9 @@
                 </header>
                 <p class="smalltext">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla quis diam. Vivamus luctus egestas leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.;</p>
             </a>
-        </section>
+        </div>
         <section class="section section__questions">
-            <p class="bold navy section__questions__header">Máte dotaz <span class="orange">k chování aplikace?</span></p>
+            <h3 class="bold navy section__questions__header">Máte dotaz <span class="orange">k chování aplikace?</span></h3>
             <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
             <a href="mailto:podpora@l3web.cz" class="section__questions__mail bold navy">podpora@l3web.cz</a>
             <p class="button"><a href="">Napište nám e-mail</a></p>
@@ -157,7 +184,7 @@
                     <p>460 00 Liberec</p>
                 </address>
                 <address class="footer__kontakt__ico">
-                    <p class="phone"><a href="tel:+420 777 666 666">+420 777 666 666</a></p>
+                    <p class="phone"><a href="tel:+420777666666">+420 777 666 666</a></p>
                     <p class="mail"><a href="mailto:info@l3web.cz">info@l3web.cz</a></p>
                 </address>
                 <div class="footer__kontakt__socials">
@@ -187,7 +214,7 @@
                 <p><a href="">Přihlášení k účtu</a></p>
                 <p><a href="">Školení</a></p>
                 <p><a href="">FAQ - Časté dotazy</a></p>
-                <p><a href="">Kontakty</a></p>
+                <p><a href="kontakt.html">Kontakty</a></p>
                 <p><a href="">Videotutoriály</a></p>
             </div>
             <div class="footer__menu">
@@ -198,7 +225,7 @@
                 <p><a href="funkce.html">Funkce</a></p>
                 <p><a href="">Podpora</a></p>
                 <p><a href="">Ceník</a></p>
-                <p><a href="">Kontakt</a></p>
+                <p><a href="kontakt.html">Kontakt</a></p>
             </div>
         </div>
         <div class="footer__footer">

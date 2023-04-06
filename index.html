@@ -7,13 +7,15 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <script src="hamburger.js"></script>
     <title>Logoipsum | Homepage</title>
 </head>
 <body>
     <header class="header">
         <div class="header__kontakt">
             <address class="header__kontakt__address">
-                <div class="header__kontakt--phone phone smalltext bold"><a href="tel:+420 777 666 666">+420 777 666 666</a></div>
+                <div class="header__kontakt--phone phone smalltext bold"><a href="tel:+420777666666">+420 777 666 666</a></div>
                 <div class="header__kontakt--mail mail smalltext bold"><a href="mailto:obchod@l3web.cz">obchod@l3web.cz</a></div>
             </address>
             <div class="header__kontakt--login">
@@ -27,36 +29,55 @@
                     <img src="ico/logo-default.svg" alt="Logoipsum">
                 </a>
             </div >
-            <nav class="header__menu">
+            <div class="hamburger__box">
+                <div class="hamburger-row">
+                    <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <nav class="hamburger-nav hamburger-zone bold">
+                    <ul>
+                        <li class="li--uvod"><a href="index.html">Úvod</a></li>
+                        <li class="li--funkce"><a href="funkce.html">Funkce</a></li>
+                        <li><a href="">Podpora</a></li>
+                        <li><a href="">Ceník</a></li>
+                        <li class="li--kontakt"><a href="">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div >
+            <div class="header__aside">
+            <nav class="header__menu header__menu--uvod bold">
                 <ul>
-                    <li><a href="index.html">Úvod</a></li>
-                    <li><a href="funkce.html">Funkce</a></li>
+                    <li class="li--uvod"><a href="index.html">Úvod</a></li>
+                    <li class="li--funkce"><a href="funkce.html">Funkce</a></li>
                     <li><a href="">Podpora</a></li>
                     <li><a href="">Ceník</a></li>
-                    <li><a href="">Kontakt</a></li>
+                    <li class="li--kontakt"><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
+            <p class="button header__button"><a href="">Zkušební verze</a></p>
+        </div>
         </div> 
-        <p class="button header__button"><a href="">Zkušební verze</a></p>
+        
     </header>
     <main class="main">
         <section class="section skola">
-            <header class="section__header">
-                <h2><span class="orange">Řízení školy</span> ještě nebylo jednodušší</h2>
-            </header>
+                <header class="section__header">
+                    <h2><span class="orange">Řízení školy</span> ještě nebylo jednodušší</h2>
+                </header>
                 <p class="navy">Představujeme Software pro <span class="bold">řízení lidských zdrojů ve škole nebylo efektivnější</span>.</p>
-                <div class="skola__grid">
                     <ul class="skola__list">
-                        <li class="smalltext navy">Počítá mzdové náklady</li>
-                        <li class="smalltext navy">Generuje lidi</li>
-                        <li class="smalltext navy">Tvoří budoucnost</li>
+                            <li class="smalltext navy">Počítá mzdové náklady</li>
+                            <li class="smalltext navy">Generuje lidi</li>
+                            <li class="smalltext navy">Tvoří budoucnost</li>
                     </ul>
-                    <p class="button skola__button"><a href="">Vyzkoušejte demo</a></p>
-                    <figure class="figure skola__figure">
-                        <img src="img/school-small.jpg" alt="Prázdná školní třída">
-                        <figcaption>Prázdná školní třída</figcaption>
-                    </figure>
-                </div>
+                <p class="button skola__button"><a href="">Vyzkoušejte demo</a></p>
+                <figure class="figure skola__figure">
+                    <img src="img/school-small.jpg" alt="Prázdná školní třída">
+                    <figcaption>Prázdná školní třída</figcaption>
+                </figure>
         </section>
         <div class="sponsors">
             <figure class="figure sponsors__logo--one">
@@ -85,7 +106,7 @@
                     <p class="vyhody__icons--arrows bold blue">Umožňuje outsourcing personalistických procesů</p>
                     <p class="vyhody__icons--note bold blue">Zaručuje splnění požadavků ISO a IATF</p>
                 </div>
-                <div class="vyhody__slider">
+                <div class="vyhody__slider vyhody__slider--uvod">
                     <a href="funkce.html" class="vyhody__slider__item">
                         <header class="vyhody__slider__item__header navy">
                             <p class="bold">Administrace aplikace</p>
@@ -98,7 +119,7 @@
                         </header>
                         <p class="smalltext">Vestibulum fermentum tortor id mi. <span class="bold">Duis viverra diam non justo. Vivamus</span> ac leo pretium faucibus. Aenean placerat. Fusce tellus</p>
                     </a>
-                    <a href="funkce.html" class="vyhody__slider__item">
+                        <a href="funkce.html" class="vyhody__slider__item">
                         <header class="vyhody__slider__item__header navy">
                             <p class="bold">Popisy pracovních míst</p>
                         </header>
@@ -117,10 +138,12 @@
             <header class="section__header">
                 <h2>Příběh</h2>
             </header>
-            <h3>Jsme dva - Honza a Tomáš</h3>
-            <p class="smalltext">Praesent ultricies lacus in ligula volutpat feugiat. In hac habitasse platea dictumst. In hac habitasse platea dictumst. 
-                Fusce luctus justo eget nisi hendrerit, quis aliquam arcu porta. Cras ultricies, elit sit amet cursus consectetur, risus felis ullamcorper nulla, ut scelerisque sapien lorem non sem. Integer vestibulum ornare ligula, a placerat lectus volutpat ultrices. Aliquam commodo malesuada purus a mollis. Vestibulum pulvinar aliquam libero eu consequat. Cras massa orci, ultrices sed scelerisque id, semper vel neque. Proin a turpis quis nibh cursus hendrerit sit amet vel libero. Nullam sit amet laoreet ante. Mauris sit amet mi vitae arcu dignissim porttitor et in arcu. Nullam eleifend molestie arcu, pretium fermentum orci feugiat eget. Integer dapibus tincidunt ipsum, at rutrum magna rutrum at. Quisque pretium convallis vestibulum.
-            </p>
+            <div class="pribeh__box">
+                <h3>Jsme dva - Honza a Tomáš</h3>
+                <p class="smalltext">Praesent ultricies lacus in ligula volutpat feugiat. In hac habitasse platea dictumst. In hac habitasse platea dictumst. 
+                    Fusce luctus justo eget nisi hendrerit, quis aliquam arcu porta. Cras ultricies, elit sit amet cursus consectetur, risus felis ullamcorper nulla, ut scelerisque sapien lorem non sem. Integer vestibulum ornare ligula, a placerat lectus volutpat ultrices. Aliquam commodo malesuada purus a mollis. Vestibulum pulvinar aliquam libero eu consequat. Cras massa orci, ultrices sed scelerisque id, semper vel neque. Proin a turpis quis nibh cursus hendrerit sit amet vel libero. Nullam sit amet laoreet ante. Mauris sit amet mi vitae arcu dignissim porttitor et in arcu. Nullam eleifend molestie arcu, pretium fermentum orci feugiat eget. Integer dapibus tincidunt ipsum, at rutrum magna rutrum at. Quisque pretium convallis vestibulum.
+                </p>
+            </div >
             <figure class="pribeh__figure">
                 <img src="img/story-small.jpg" alt="Kniha se zajímavým příběhem">
                 <figcaption>Kniha se zajímavým příběhem</figcaption>
@@ -192,7 +215,7 @@
     </main>
     <footer class="footer">
         <div class="footer__grid">
-            <div class="footer__kontakt">
+            <div class="footer__kontakt footer__grid__box">
                 <div class="logo--img footer__logo--img">
                     <a href="index.html">
                         <img src="ico/logo-footer.svg" alt="">
@@ -204,7 +227,7 @@
                     <p>460 00 Liberec</p>
                 </address>
                 <address class="footer__kontakt__ico">
-                    <p class="phone"><a href="tel:+420 777 666 666">+420 777 666 666</a></p>
+                    <p class="phone"><a href="tel:+420777666666">+420 777 666 666</a></p>
                     <p class="mail"><a href="mailto:info@l3web.cz">info@l3web.cz</a></p>
                 </address>
                 <div class="footer__kontakt__socials">
@@ -216,7 +239,7 @@
                     </a>
                 </div>
             </div>
-            <div class="footer_videos">
+            <div class="footer_videos footer__grid__box">
                 <div class="footer__header">
                     <h4>Videotutoriály</h4>
                 </div>
@@ -227,17 +250,17 @@
                 <p><a href="">Plánování pracovníků a mezd</a></p>
                 <p><a href="">Všechna videa</a></p>
             </div>
-            <div class="footer__support">
+            <div class="footer__support footer__grid__box">
                 <div class="footer__header">
                     <h4>Podpora</h4>
                 </div>
                 <p><a href="">Přihlášení k účtu</a></p>
                 <p><a href="">Školení</a></p>
                 <p><a href="">FAQ - Časté dotazy</a></p>
-                <p><a href="">Kontakty</a></p>
+                <p><a href="kontakt.html">Kontakty</a></p>
                 <p><a href="">Videotutoriály</a></p>
             </div>
-            <div class="footer__menu">
+            <div class="footer__menu footer__grid__box">
                 <div class="footer__header">
                     <h4>Menu</h4>
                 </div>
@@ -245,7 +268,7 @@
                 <p><a href="funkce.html">Funkce</a></p>
                 <p><a href="">Podpora</a></p>
                 <p><a href="">Ceník</a></p>
-                <p><a href="">Kontakt</a></p>
+                <p><a href="kontakt.html">Kontakt</a></p>
             </div>
         </div>
         <div class="footer__footer">
