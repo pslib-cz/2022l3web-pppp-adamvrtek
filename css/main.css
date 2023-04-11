@@ -175,6 +175,7 @@ h1.logo--hidden::before {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+    padding-bottom: 0;
 }
 
 .skola .section__header {
@@ -200,7 +201,7 @@ h1.logo--hidden::before {
 
 .sponsors {
     display: grid;
-    grid-template-columns: 1fr 55px 1fr ;
+    grid-template-columns: 1fr 20% 1fr ;
     margin: 2em;
 }
 
@@ -373,7 +374,7 @@ h1.logo--hidden::before {
     margin-bottom: 0.5em;
 }
 
-.o-nas::before {
+.o-nas::before, .aktuality::before, .skola::after {
     display: block;
     content: "";
     width: 95%;
@@ -382,13 +383,9 @@ h1.logo--hidden::before {
     margin: 1em 0;
 }
 
-.aktuality::before {
-    display: block;
-    content: "";
-    width: 95%;
-    height: 1px;
-    background-color: var(--gray);
-    margin: 1em 0;
+.skola::after {
+    grid-column: 1/3;
+    margin-top: 3em;
 }
 
 .aktuality__main__item--first::before {
@@ -771,10 +768,6 @@ h1.logo--hidden::before {
 
     .logo--img {
         scale: 1.5;
-    }
-
-    .skola {
-        grid-template-rows: auto;
     }
     
     .skola .section__header {
