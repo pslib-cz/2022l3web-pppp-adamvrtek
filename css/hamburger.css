@@ -47,13 +47,15 @@
     transform: scaleX(0);
     transition: 0.3s;
     transform-origin: center;*/
+    display: hidden;
     width: 100%;
     position: absolute;
     left: 0;
-    right: -150000px;
+    right: -2000px;
     margin-left: auto;
     margin-right: auto;
     transition: 0.3s;
+    transition-timing-function: ease-in-out;
     transform-origin: center;
 }
 
@@ -117,6 +119,7 @@
         margin-left: auto;
         margin-right: auto;
         transition: 0.3s;
+        transition-timing-function: ease-in-out;
         transform-origin: center;
         background-color: var(--lightgray);
     }
